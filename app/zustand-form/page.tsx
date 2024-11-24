@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import useData from "../(hooks)/use-data";
+import Link from "next/link";
 
 export default function AppForm() {
   const { appName, appDescription, setAppName, setAppDescription } = useData(
@@ -47,6 +48,19 @@ export default function AppForm() {
       >
         Submit
       </button>
+      <span className="flex flex-row text-lg">
+        Check out the GitHub repo from&nbsp;
+        <Link
+          href={"https://github.com/AVidhanR/ZustandExp"}
+          className="hover:underline font-black"
+          target="_blank"
+        >
+          here
+        </Link>
+      </span>
+      <Link href={"/"} className="hover:underline font-bold text-lg">
+        Return Home
+      </Link>
       Check the result from below:
       <h1 className="text-3xl font-bold">
         {appName} <br /> {appDescription}
