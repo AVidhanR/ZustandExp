@@ -1,9 +1,9 @@
 ## Getting Started
 
-- First, run the development server:
+- Firstly, install and run the development server:
 
 ```bash
-npm i && npm run dev
+npm install && npm run dev
 # or other necessary package manager's command
 ```
 
@@ -11,5 +11,5 @@ npm i && npm run dev
 
 ---
 
-- Check out the Zustand Documentation from here: [Zustand.docs](https://zustand.docs.pmnd.rs/getting-started/introduction)
-- The main state mangement logic is in the `(hooks)` directory. Check out the [`app/(hooks)/use-data.ts`](<app/(hooks)/use-data.ts>) file.
+- Check out the Zustand Documentation from here: &nbsp;[Zustand.docs](https://zustand.docs.pmnd.rs/getting-started/introduction)
+- The main state mangement logic is in the `(hooks)` directory. Check out the [app/(hooks)/use-data.ts](<app/(hooks)/use-data.ts>) file.
