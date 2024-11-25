@@ -4,21 +4,24 @@ import useData from "../(hooks)/use-data";
 import Link from "next/link";
 
 export default function AppForm() {
-  const { appName, appDescription, setAppName, setAppDescription } = useData(
-    (state) => state
-  );
+  const { setAppName, setAppDescription } = useData((state) => state);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
-    const appName = formData.get("appName") as string;
-    const appDescription = formData.get("appDescription") as string;
+    const theAppName = formData.get("appName") as string;
+    const theAppDescription = formData.get("appDescription") as string;
 
-    setAppName(appName);
-    setAppDescription(appDescription);
+    setAppName(theAppName);
+    setAppDescription(theAppDescription);
 
-    console.log("Form Data: ", appName, appDescription);
+    const data = useData.getState();
+
+    const name: any = document.getElementById("app-name");
+    const description: any = document.getElementById("app-description");
+    name.textContent = data.appName;
+    description.textContent = data.appDescription;
 
     e.currentTarget.reset();
   };
@@ -63,7 +66,7 @@ export default function AppForm() {
       </Link>
       Check the result from below:
       <h1 className="text-3xl font-bold">
-        {appName} <br /> {appDescription}
+        <span id="app-name"></span> <br /> <span id="app-description"></span>
       </h1>
     </form>
   );
