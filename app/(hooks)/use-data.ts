@@ -6,13 +6,13 @@ type State = {
   appId: string;
 };
 
-type Action = {
+type Actions = {
   setAppName: (appName: State["appName"]) => void;
   setAppDescription: (appDescription: State["appDescription"]) => void;
   setAppId: (appId: State["appId"]) => void;
 };
 
-const useData = create<State & Action>((set) => {
+const useData = create<State & Actions>((set) => {
   return {
     appName: "",
     appDescription: "",
