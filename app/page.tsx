@@ -17,7 +17,7 @@ export default function Home() {
         onChange={(e) => setAppName(e.target.value)}
       />
       <br />
-      <h1 className="text-2xl text-center">{appName}</h1>
+      <h1 className="text-3xl font-bold mb-2 text-center">{appName}</h1>
       <span className="flex flex-row text-lg">
         Check out the GitHub repo from&nbsp;
         <Link
