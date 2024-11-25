@@ -1,5 +1,8 @@
 import { create } from "zustand";
 
+// remember Zustand is a global state management library
+// It's Asynchronous and it's a hook based library
+
 type State = {
   appName: string;
   appDescription: string;
